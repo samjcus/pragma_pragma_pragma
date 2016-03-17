@@ -12,7 +12,7 @@ L_MPI = -L/usr/local/lib
 NAME = monte_pi
 
 
-all: C_serial C_OMP
+all: C_serial C_OMP C_MPI
 
 C_serial: bin/$(NAME)_serial_C.exe
 
