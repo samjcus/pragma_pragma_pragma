@@ -15,16 +15,16 @@ int main(int argc, char *argv[])
 
   primes = malloc(sizeof(bool)*limit);
 
-#pragma omp parallel shared(primes) private(i,j) firstprivate(limit)
+#pragma omp parallel default(none) shared(primes) private(j) firstprivate(limit)
   {
     /* fill boolean array */
-#pragma omp for
+#pragma omp for schedule(static)
     for (i=2;i<limit;i++)
       {
 	primes[i]=1;
       }
     /* Sieve of Eratosthenes */
-#pragma omp for
+#pragma omp for schedule(static)
     for (i=2;i<limit;i++)
       {
 	if (primes[i])
