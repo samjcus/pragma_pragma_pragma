@@ -20,7 +20,7 @@ int fib(int n)
 
 int main (int argc, char *argv[])
 {
-  int N,i;
+  int N;
   int res;
   double t_start,t_end;
   

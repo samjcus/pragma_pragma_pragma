@@ -14,7 +14,7 @@ int fib(int n)
 
 int main (int argc, char *argv[])
 {
-  int N,i;
+  int N;
   int res;
   clock_t t_start,t_end;
   
