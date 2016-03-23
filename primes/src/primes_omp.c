@@ -14,7 +14,8 @@ int main(int argc, char *argv[])
   start_t=omp_get_wtime();
 
   primes = malloc(sizeof(bool)*limit);
-
+  primes[0]=0;
+  primes[1]=0;
 #pragma omp parallel default(none) shared(primes,Nprimes) private(j) firstprivate(limit)
   {
     /* fill boolean array */
