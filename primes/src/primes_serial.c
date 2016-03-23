@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[])
 {
-  unsigned long long int i,j,limit;
+  unsigned long long int i,j,limit,Nprimes;
   bool *primes;
   time_t start_t,end_t;
 
@@ -20,6 +20,8 @@ int main(int argc, char *argv[])
     {
       primes[i]=1;
     }
+  primes[0]=0;
+  primes[1]=0;
   /* Sieve of Eratosthenes */
   for (i=2;i<limit;i++)
     {
@@ -31,9 +33,15 @@ int main(int argc, char *argv[])
 	    }
 	}
     }
+
+  Nprimes=0;
+  for(i=0;i<limit;i++)
+    {
+      if (primes[i]) Nprimes++;
+    }
   
   end_t=clock();
-  
+  printf("Nprimes = %llu\n",Nprimes);
   printf("Took %g s\n",(double)(end_t - start_t)/CLOCKS_PER_SEC);
   return EXIT_SUCCESS;
 }
