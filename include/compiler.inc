@@ -1,0 +1,10 @@
+CC = gcc-5
+FC = gfortran-5
+MPICC = /opt/openmpi/bin/mpicc
+MPIF90 = /usr/local/bin/mpif90
+CFLAGS = -Wall
+FFLAGS =
+C_OMP_FLAG = -fopenmp
+F_OMP_FLAG = -fopenmp
+I_MPI = -I/opt/openmpi/include
+L_MPI = -L/opt/openmpi/lib

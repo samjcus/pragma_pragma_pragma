@@ -1,6 +1,6 @@
 include ../include/compiler.inc
 
-NAME = fib
+NAME = primes
 
 all: C_serial C_OMP
 
