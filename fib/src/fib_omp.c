@@ -10,9 +10,9 @@ int fib(int n)
   //if n too small, sequence is too short and task creation dominates
   if (n<20) return fib(n-1)+fib(n-2);
   
-#pragma omp task shared(x)
+#pragma omp task default(none) shared(x,n)
   x= fib(n-1);
-#pragma omp task shared(y)
+#pragma omp task default(none) shared(y,n)
   y= fib(n-2);
 #pragma omp taskwait
   return x+y;
@@ -27,9 +27,9 @@ int main (int argc, char *argv[])
   N=44;
 
   t_start=omp_get_wtime();
-#pragma omp parallel
+#pragma omp parallel default(none) shared(res,N)
   {
-#pragma omp single nowait
+#pragma omp single 
     res=fib(N);
   }
   t_end=omp_get_wtime();
