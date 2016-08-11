@@ -18,6 +18,8 @@ Compiler configs are set in include/compiler.inc
 - python: PEP8, duh
 
 ## Ideas
+- Vector-Matix Multiplication
+- Matrix Multiplication
 - mandlebrot set
 - multigrid
 - 1D wave equation
