@@ -2,6 +2,6 @@ PROGRAM hello_f
 
   IMPLICIT NONE
   
-  WRITE (*,*) "Hello, World!"
+  WRITE (*,'(A)') "Hello, World!"
   
 END PROGRAM hello_f
