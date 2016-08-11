@@ -6,9 +6,9 @@ Each example problem here has been solved using either a shared memory model (Op
 ## Setup
 Current requirements:
 - C and Fortran compilers with OpenMP 3.0
-- Python interpreter (tested with 2.7.10)
+- Python interpreter (tested with 2.7.11)
 - MPI implementation (tested with OpenMPI 1.10.2)
-- mpi4py
+- mpi4py (tested with mpich 3.2.0)
 
 Compiler configs are set in include/compiler.inc
 
