@@ -6,6 +6,7 @@ CFLAGS = -Wall
 FFLAGS =
 C_OMP_FLAG = -fopenmp
 F_OMP_FLAG = -fopenmp
+C_PTHREADS_FLAG = -pthread
 I_MPI = 
 L_MPI = 
 

@@ -6,6 +6,8 @@ C_OMP: bin/$(NAME)_omp_C.exe
 
 F_OMP: bin/$(NAME)_omp_F.exe
 
+C_PTHREADS: bin/$(NAME)_pthreads_C.exe
+
 C_MPI: bin/$(NAME)_mpi_C.exe
 
 F_MPI: bin/$(NAME)_mpi_F.exe
@@ -21,6 +23,9 @@ bin/$(NAME)_omp_C.exe:  src/$(NAME)_omp.c
 
 bin/$(NAME)_omp_F.exe:  src/$(NAME)_omp.f90
 	$(FC) $^ $(FFLAGS) $(F_OMP_FLAG) -o $@
+
+bin/$(NAME)_pthreads_C.exe: src/$(NAME)_pthreads.c
+	$(CC) $^ $(CFLAGS) $(C_PTHREADS_FLAG) -o $@
 
 bin/$(NAME)_mpi_C.exe: src/$(NAME)_mpi.c
 	$(MPICC) $^ $(CFLAGS) $(L_MPI) -o $@
