@@ -1,6 +1,6 @@
 PROGRAM primes_serial
   IMPLICIT NONE
-  INTEGER(kind=8) ::  i, j, Nprimes
+  INTEGER(kind=8) ::  i, Nprimes
   REAL(kind=8) :: start_t, end_t
   LOGICAL, ALLOCATABLE :: primes(:)
   INTEGER, PARAMETER :: limit = 500000000
