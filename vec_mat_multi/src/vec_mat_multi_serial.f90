@@ -26,7 +26,7 @@ PROGRAM vec_mat_multi_serial
   CALL RANDOM_NUMBER(array)
   
   DO i=1,len_vec
-     temp=0.0
+     temp=0.0d+0
      DO j=1,len_vec
         temp = temp + in_vector(j)*array(j,i)
      END DO
