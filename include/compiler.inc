@@ -17,7 +17,7 @@ CC = clang-omp
 FC = gfortran-5
 MPICC = /Users/samjcus/builds/mpi_clang/bin/mpicc
 MPIF90 = /Users/samjcus/builds/mpi_clang/bin/mpif90
-CFLAGS = -Weverything -std=c99 
+CFLAGS = -Weverything -std=c99 -Wconversion -fsanitize=undefined
 FFLAGS = -Wall -Wextra -Wconversion -std=f95 -fbounds-check -fbacktrace -ffpe-trap=zero,overflow,underflow
 C_OMP_FLAG = -fopenmp
 F_OMP_FLAG = -fopenmp

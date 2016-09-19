@@ -12,7 +12,7 @@ int main (int argc, char *argv[])
   x=0;
   sum = 0.0;
   step = 1.0/(double) num_steps;
-  t_start = (double) clock();
+  t_start = clock();
   for (i=0; i < num_steps; i++)
     {
       x = (i+0.5)*step;
@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
     }
   
   pi = step * sum;
-  t_end = (double) clock();
+  t_end = clock();
   printf("Value of pi = %g\n",pi);
   printf("Expended wall clock time = %.20f\n", (double)(t_end - t_start)/CLOCKS_PER_SEC);
   return EXIT_SUCCESS;

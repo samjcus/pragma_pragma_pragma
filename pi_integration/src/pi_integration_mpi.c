@@ -6,7 +6,7 @@ int main (int argc, char *argv[])
 {
   int i,num_steps,ThisInitial,ThisSteps;
   int ThisTask,NTask;
-  double x, local_sum, sum, step, pi;
+  double x, local_sum=0.0, sum, step, pi;
   double t_start, t_end;
 
   MPI_Init(&argc, &argv);
