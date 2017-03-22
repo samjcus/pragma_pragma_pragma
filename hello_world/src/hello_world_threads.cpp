@@ -8,7 +8,7 @@ static std::mutex mutex;
 void print_msg(int thread_id)
 {
   std::lock_guard<std::mutex> guard(mutex);
-  std::cout << "Hello Hazel from thread " << thread_id << std::endl;
+  std::cout << "Hello from thread " << thread_id << std::endl;
 }
 
 int main()
